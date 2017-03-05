@@ -127,7 +127,7 @@ public class SegmentedButton extends Button {
 
     private void drawButton() {
 
-        final CharSequence text = getText();
+        CharSequence text = getText();
         if (!TextUtils.isEmpty(text)) {
             TextPaint textPaint = getPaint();
             textPaint.getTextBounds(text.toString(), 0, text.length(), textBounds);
@@ -135,10 +135,10 @@ public class SegmentedButton extends Button {
             textBounds.setEmpty();
         }
 
-        final int width = getWidth() - (getPaddingLeft() + getPaddingRight());
-        final int height = getHeight() - (getPaddingTop() + getPaddingBottom());
+        int width = getWidth() - (getPaddingLeft() + getPaddingRight());
+        int height = getHeight() - (getPaddingTop() + getPaddingBottom());
 
-        final Drawable[] drawables = getCompoundDrawables();
+        Drawable[] drawables = getCompoundDrawables();
 
         int offSet = 0;
         for (int i = 0; i < drawables.length; i++) {
